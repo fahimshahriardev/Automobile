@@ -1,0 +1,55 @@
+/* fonts */
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+
+  font-style: normal;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+.backgroundImg {
+  background-image: url(./assets/products-page/bg.png);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  user-select: none;
+}
+
+/* swiper style */
+
+.swiper {
+  width: 370px;
+  height: 600px;
+}
+
+.swiper-slide {
+  width: 360px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide > div > img {
+  pointer-events: none;
+}
+.swiper-slide > div > h3 {
+  pointer-events: none;
+}
+
+.sccoter-swiper-slide {
+  width: 380px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background-color: #f12b00 !important;
+  width: 370px !important;
+}

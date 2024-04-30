@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home-Tvs</title>
+    <!-- style css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- input telephone plugin -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css"
+    />
+
+    <!-- aos link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <div
+      data-aos-duration="3000"
+      data-aos="fade-up"
+      id="popup"
+      class="fixed shadow-md shadow-[#f12b00] z-[9999] montserrat md:bottom-5 bottom-0 md:left-5 bg-white w-[370px] rounded-md"
+    >
+      <div class="py-3 px-5">
+        <div class="flex justify-between items-center py-3">
+          <img class="w-20 h-10" src="./assets/logo/TVS-logo.png" alt="" />
+          <svg
+            id="cross"
+            class="w-5 h-5 cursor-pointer"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+          >
+            <path d="m4.12 6.137 1.521-1.52 7 7-1.52 1.52z" />
+            <path d="m4.12 11.61 7.001-7 1.52 1.52-7 7z" />
+          </svg>
+        </div>
+        <hr />
+        <h3 class="text-xl py-2 font-bold text-[#f12b00]">
+          Register for exciting offers!
+        </h3>
+        <div class="flex flex-col gap-1">
+          <label class="uppercase text-[#f12b00] text-sm">name *</label>
+          <input
+            placeholder="Enter Name"
+            class="border-gray-400 border-2 py-1 px-2 rounded-sm bg-[#F1F1F1]"
+            type="text"
+          />
+        </div>
+        <div class="flex flex-col gap-1 mt-1">
+          <label class="uppercase text-[#f12b00] text-sm">number *</label>
+
+          <div class="flex">
+            <input
+              id="phone"
+              value="+966"
+              class="border-gray-400 border-2 py-1 px-2 w-full rounded-sm bg-[#F1F1F1]"
+              type="tel"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 mt-1">
+          <label class="uppercase text-[#f12b00] text-sm">Interested In*</label>
+
+          <select
+            class="border-gray-400 border-2 py-1 px-2 rounded-sm bg-[#F1F1F1]"
+          >
+            <option selected class="text-gray-400">-Choose a vehicles-</option>
+            <option value="Motorcycles">Apache RR 310</option>
+            <option value="Motorcycles">Apache RTR 160 4V</option>
+            <option value="Motorcycles">HLX 150 5 Gear</option>
+            <option value="Scooters">Ntorq 125 RE</option>
+            <option value="Scooters">Jupiter</option>
+          </select>
+        </div>
+        <div class="flex items-start gap-1 mt-3">
+          <input
+            type="checkbox"
+            name="checkbox"
+            value="value"
+            id="0"
+            class=""
+          />
+          <label for="0"
+            ><div class="text-gray-400 text-xs">
+              I have read and understood
+              <a
+                class="text-blue-900"
+                href="https://www.tvsmotor.com/en/sa/terms-and-conditions"
+                target="_blank"
+                >Terms &amp; Condition</a
+              >
+              and
+              <a
+                class="text-blue-900"
+                href="https://www.tvsmotor.com/en/sa/privacy-policy"
+                target="_blank"
+                >Privacy Policy</a
+              >
+              and agree to it.
+            </div></label
+          >
+        </div>
+        <div class="flex items-start gap-1 mt-3">
+          <input
+            type="checkbox"
+            name="checkbox"
+            value="value"
+            id="0"
+            class=""
+          />
+          <label for="0"
+            ><div class="text-gray-400 text-xs">
+              I authorize TVS Motor Company Ltd or its partners to contact for
+              marketing purposes.
+            </div></label
+          >
+        </div>
+      </div>
+      <div class="bg-[#F1F1F1] py-3 px-5 flex gap-2">
+        <button
+          id="cancel"
+          class="uppercase text-base bg-[#f12b00] text-white py-1 rounded-lg w-full font-semibold"
+        >
+          cancel
+        </button>
+        <button
+          id="submit"
+          class="uppercase text-base bg-[#f12b00] text-white py-1 rounded-lg w-full font-semibold"
+        >
+          submit
+        </button>
+      </div>
+    </div>
+
+    <!-- navbar start -->
+    <div class="bg-black nav fixed shadow-md shadow-black w-full z-50">
+      <div
+        class="lg:flex lg:justify-between block items-center lg:py-7 xl:px-28 lg:px-16 py-3 px-5"
+      >
+        <!-- logo -->
+        <div class="flex items-center gap-5 cursor-pointer justify-between">
+          <a href="/index.html">
+            <img
+              class="lg:w-28 lg:h-30 w-16 h-16"
+              src="./assets/logo/TVS-logo.png"
+              alt=""
+            />
+          </a>
+          <div id="toggle-btn" class="w-20 h-20 lg:hidden">
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 15.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z"
+                fill-rule="nonzero"
+                fill="#ffffff"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- nav link -->
+        <div class="lg:flex hidden navbarDropdown transition-all">
+          <ul class="flex lg:flex-row flex-col lg:mt-0 gap-6 mt-5">
+            <li>
+              <a
+                href="/products.html"
+                class="text-white uppercase text-lg font-semibold"
+                >Our Products</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white uppercase text-lg font-semibold"
+                >Contact us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white uppercase text-lg font-semibold"
+                >About us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- button -->
+        <div class="lg:flex gap-2 lg:mt-0 mt-5 hidden navbarDropdown">
+          <a class="#">
+            <img
+              class="bg-[#f12b00] py-2 px-4 rounded-sm"
+              src="./assets/logo/Tvs Global.png"
+              alt=""
+          /></a>
+          <a
+            class="bg-[#f12b00] items-center px-1 flex gap-1 rounded-sm"
+            href="#"
+          >
+            <img class="w-9 h-6" src="./assets/logo/saudi-arabia.png" alt="" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path
+                d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414"
+                fill="#ffffff"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar end -->
+    <!-- banner section start -->
+    <section id="section1" class="relative">
+      <div class="swiper mySwiper relative">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide relative">
+            <img class="img" src="./assets/banner/Banner.png" alt="" />
+            <div
+              class="flex md:gap-10 gap-5 flex-col absolute lg:top-1/3 top-[30%] left-[10%]"
+            >
+              <div data-aos="fade-right" data-aos-duration="2000">
+                <h2
+                  class="text-[#f12b00] font-black flex flex-col text-start lg:text-5xl md:text-3xl text-xl uppercase"
+                >
+                  <span
+                    class="lg:text-2xl md:text-lg text-white text-sm font-normal"
+                    >crafted to</span
+                  >
+                  overcome,
+                </h2>
+
+                <h2
+                  class="text-[#f12b00] font-black flex flex-col text-start lg:text-5xl md:text-3xl text-xl uppercase"
+                >
+                  <span class="md:text-2xl text-white text-sm font-normal"
+                    >crafted to</span
+                  >
+                  Outperform
+                </h2>
+              </div>
+              <a
+                href="./products.html"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                class="bg-[#f12b00] text-center lg:text-2xl text-sm py-2 md:px-8 px-4 rounded-sm text-white font-bold"
+                >EXPLORE</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide relative">
+            <img class="img" src="./assets/banner/Asset 20.png" alt="" />
+            <div
+              class="flex md:gap-10 gap-5 flex-col absolute lg:top-1/3 top-[30%] left-[10%]"
+            >
+              <div data-aos="fade-right" data-aos-duration="2000">
+                <h2
+                  class="text-[#f12b00] font-black flex flex-col text-start lg:text-5xl md:text-3xl text-xl uppercase"
+                >
+                  <span class="md:text-2xl text-white text-sm font-normal"
+                    >PERFORMANCE</span
+                  >
+                  EVOLUTION
+                </h2>
+              </div>
+              <a
+                href="./products.html"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                class="bg-[#f12b00] text-center lg:text-2xl text-sm py-2 md:px-8 px-4 rounded-sm text-white font-bold"
+                >EXPLORE</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide relative">
+            <img class="img" src="./assets/banner/Asset 21.png" alt="" />
+            <div
+              class="flex md:gap-10 gap-5 flex-col absolute md:top-1/3 top-[30%] left-[10%]"
+            >
+              <div data-aos="fade-right" data-aos-duration="2000">
+                <h2
+                  class="text-[#f12b00] text-center font-black flex flex-col text-start lg:text-5xl md:text-3xl text-xl uppercase"
+                >
+                  <span class="md:text-2xl text-white text-sm font-normal"
+                    >Partner</span
+                  >
+                  in progress
+                </h2>
+              </div>
+              <a
+                href="./products.html"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                class="bg-[#f12b00] lg:text-2xl text-sm py-2 md:px-8 px-4 rounded-sm text-white font-bold"
+                >EXPLORE</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-28 right-16 z-40 md:flex gap-3 hidden">
+          <div class="swiperbutton-prev bg-white p-3 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path
+                d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+              />
+            </svg>
+          </div>
+          <div class="swiperbutton-next bg-white p-3 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path
+                d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- banner section end -->
+    <!-- explore our vehicles start -->
+    <section id="section2" class="container mx-auto">
+      <h2
+        class="pt-4 uppercase text-center text-[#f12b00] md:text-4xl text-2xl font-extrabold"
+      >
+        explore our vehicles
+      </h2>
+      <div
+        class="my-4 flex md:flex-row gap-5 items-center flex-col justify-between md:px-28 px-14"
+      >
+        <div class="flex gap-2">
+          <button
+            class="category py-2 px-1 uppercase text-[#f12b00] md:text-xl text-lg font-extrabold"
+          >
+            motorcycles
+          </button>
+          <button
+            class="category py-2 px-1 uppercase text-[#f12b00] md:text-xl text-lg font-extrabold"
+          >
+            sccoters
+          </button>
+        </div>
+        <a
+          href="/products.html"
+          class="py-2 px-5 rounded-sm uppercase bg-[#f12b00] text-white md:text-xl text-lg l font-extrabold"
+        >
+          view all
+        </a>
+      </div>
+      <!-- motorcycles -->
+      <div class="md:px-24 px-10 relative motorcycles">
+        <div
+          class="swiperbutton2-prev bg-white p-3 rounded-full absolute left-0 bottom-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+            />
+          </svg>
+        </div>
+        <div class="swiper mySwiper2 py-5">
+          <div class="swiper-wrapper motorcycleSlide">
+            <!-- dynamic motorbike -->
+          </div>
+        </div>
+
+        <div
+          class="swiperbutton2-next bg-white p-3 rounded-full absolute right-0 bottom-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- sccoters -->
+      <div class="md:px-24 px-10 relative sccoters hidden">
+        <div
+          class="swiperbutton3-prev bg-white p-3 rounded-full absolute left-0 bottom-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+            />
+          </svg>
+        </div>
+        <div class="swiper mySwiper3 py-5">
+          <div class="swiper-wrapper sccoterSlide"></div>
+        </div>
+
+        <div
+          class="swiperbutton3-next bg-white p-3 rounded-full absolute right-0 bottom-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path
+              d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- explore our vehicles end -->
+    <!-- who we are start -->
+    <section id="section3" class="py-10">
+      <div
+        class="whowearesection md:pt-10 md:pb-24 pt-20 md:pb-30 pb-44 relative z-20"
+      >
+        <div class="container mx-auto">
+          <h2
+            class="pt-5 uppercase text-center text-white md:text-4xl text-2xl font-extrabold"
+          >
+            who we are
+          </h2>
+          <p
+            class="text-center md:p-10 p-5 text-sm md:text-xl text-white montserrat text"
+          >
+            TVS Motor Company is the third largest 2-wheeler manufacturer in the
+            world with
+            <br />
+            the revenue of over US$ 2.6 billion. It has an anual sale of more
+            than 3.2 million units and an <br />
+            anual capacity of over 5.7 million vehicles.
+          </p>
+          <div class="flex md:flex-row flex-col justify-evenly items-center">
+            <div class="flex flex-col items-center">
+              <img class="w-28" src="./assets/who we are/Customer.png" alt="" />
+              <p
+                class="text-xl text-center mt-5 text-white montserrat font-bold"
+              >
+                50+ Million <br />
+                Happy Customers
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                class="w-28"
+                src="./assets/who we are/International.png"
+                alt=""
+              />
+              <p
+                class="text-xl text-center mt-5 text-white montserrat font-bold"
+              >
+                Truly <br />
+                International
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img class="w-28" src="./assets/who we are/Legacy.png" alt="" />
+              <p
+                class="text-xl text-center mt-5 text-white montserrat font-bold"
+              >
+                Legacy of 112 years <br />
+                of trust & Innovation
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- who we are end -->
+    <!-- brand experience start -->
+    <section id="section4">
+      <div class="bg-black relative -top-52 z-10 brandexperience">
+        <div class="pt-36">
+          <h2
+            class="pt-5 uppercase text-center text-white md:text-4xl text-2xl font-extrabold"
+          >
+            Brand Experience
+          </h2>
+        </div>
+        <!--slider start  -->
+        <div class="container mx-auto px-0 py-10 bottom-12">
+          <div class="swiper mySwiper4 relative w-full">
+            <div
+              class="swiperbutton-prev4 bg-white p-3 rounded-full absolute lg:left-28 left-10 lg:bottom-1/2 bottom-[40%] z-50"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+                />
+              </svg>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide brand relative">
+                <img
+                  class="w-full"
+                  src="./assets/brand-experience/Apache-owners-group.png"
+                  alt=""
+                />
+                <div
+                  class="absolute top-0 flex flex-col text-center h-full px-2 pb-5 justify-end w-full"
+                >
+                  <p
+                    class="text-[#f12b00] xl:text-3xl md:text-xl text-xs font-bold uppercase"
+                  >
+                    Apache racing <br />
+                    experience
+                  </p>
+                  <p
+                    class="text-white mt-3 md:text-lg text-sm text-[10px] montserrat"
+                  >
+                    The flagship property of TVS racing & Apache, provides a
+                    racing experience for the apache customers & aims to impart
+                    riding & racing techniques.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide brand relative">
+                <img
+                  class="w-full"
+                  src="./assets/brand-experience/Apache-racing-experience.png"
+                  alt=""
+                />
+                <div
+                  class="absolute top-0 flex flex-col text-center h-full px-2 pb-5 justify-end w-full"
+                >
+                  <p
+                    class="text-[#f12b00] xl:text-3xl md:text-xl text-xs font-bold uppercase"
+                  >
+                    Apache racing <br />
+                    experience
+                  </p>
+                  <p
+                    class="text-white mt-3 md:text-lg text-sm text-[10px] montserrat"
+                  >
+                    The flagship property of TVS racing & Apache, provides a
+                    racing experience for the apache customers & aims to impart
+                    riding & racing techniques.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide brand relative">
+                <img
+                  class="w-full"
+                  src="./assets/brand-experience/One Make Championship.png"
+                  alt=""
+                />
+                <div
+                  class="absolute top-0 flex flex-col text-center h-full px-2 pb-5 justify-end w-full"
+                >
+                  <p
+                    class="text-[#f12b00] xl:text-3xl md:text-xl text-xs font-bold uppercase"
+                  >
+                    Apache racing <br />
+                    experience
+                  </p>
+                  <p
+                    class="text-white mt-3 md:text-lg text-sm text-[10px] montserrat"
+                  >
+                    The flagship property of TVS racing & Apache, provides a
+                    racing experience for the apache customers & aims to impart
+                    riding & racing techniques.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide brand relative">
+                <img
+                  class="w-full"
+                  src="./assets/brand-experience/Apache-racing-experience.png"
+                  alt=""
+                />
+                <div
+                  class="absolute top-0 flex flex-col text-center h-full px-2 pb-5 justify-end w-full"
+                >
+                  <p
+                    class="text-[#f12b00] xl:text-3xl md:text-xl text-xs font-bold uppercase"
+                  >
+                    Apache racing <br />
+                    experience
+                  </p>
+                  <p
+                    class="text-white mt-3 md:text-lg text-sm text-[10px] montserrat"
+                  >
+                    The flagship property of TVS racing & Apache, provides a
+                    racing experience for the apache customers & aims to impart
+                    riding & racing techniques.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiperbutton-next4 bg-white p-3 rounded-full absolute lg:right-28 right-10 lg:bottom-1/2 bottom-[40%] z-50"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!--slider end  -->
+        <div
+          class="container mx-auto px-5 pb-28 flex md:flex-row flex-col items-center gap-16 justify-evenly lg:px-0 md:px-10"
+        >
+          <div class="flex flex-col gap-10">
+            <div class="flex gap-5 items-center">
+              <img
+                class="w-28 h-28"
+                src="./assets/brand-experience/icon/Service-contract.png"
+                alt=""
+              />
+              <div>
+                <h2 class="text-[#f12b00] uppercase font-bold">
+                  Service COntract
+                </h2>
+                <p class="text-white text-md mt-2 montserrat text-start">
+                  Tailor made service and <br />
+                  maintenance contracts
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-5 items-center">
+              <img
+                class="w-28 h-28"
+                src="./assets/brand-experience/icon/Technician.png"
+                alt=""
+              />
+              <div>
+                <h2 class="text-[#f12b00] uppercase font-bold">
+                  TVS certified technicians
+                </h2>
+                <p class="text-white text-md mt-2 montserrat text-start">
+                  Certified specialist mechanics & <br />
+                  authorized tools & spare parts
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-10">
+            <div class="flex gap-5 items-center">
+              <img
+                class="w-28 h-28"
+                src="./assets/brand-experience/icon/Service-centree.png"
+                alt=""
+              />
+              <div>
+                <h2 class="text-[#f12b00] uppercase font-bold">
+                  TVS Standard Service centre
+                </h2>
+                <p class="text-white text-md mt-2 montserrat text-start">
+                  Highly equipped service centre as per <br />
+                  TVS Motocorp standards
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-5 items-center">
+              <img
+                class="w-28 h-28"
+                src="./assets/brand-experience/icon/Warranty.png"
+                alt=""
+              />
+              <div>
+                <h2 class="text-[#f12b00] uppercase font-bold">
+                  12 Months/24k kms TVS warrantry
+                </h2>
+                <p class="text-white text-md mt-2 montserrat text-start">
+                  All TVS Motorcycles & Scooters come with <br />
+                  a 12 months/24,000 KMS warranty
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- brand experience end -->
+    <section id="section5" class="relative">
+      <!-- awards and experince start -->
+      <div class="relative w-full -top-48">
+        <h2
+          class="uppercase text-center text-[#f12b00] md:text-4xl text-2xl font-extrabold"
+        >
+          Awards and Experience
+        </h2>
+        <div
+          class="container mx-auto flex justify-evenly md:flex-row flex-col gap-10 md:px-28 px-5 my-16"
+        >
+          <div class="flex flex-col items-center gap-4">
+            <div class="h-36 flex items-center">
+              <img
+                class="h-full"
+                src="./assets/awards/Bike Awards.png"
+                alt=""
+              />
+            </div>
+            <h3
+              class="text-[#f12b00] lg:text-3xl text-xl font-extrabold text-center"
+            >
+              Bike awards <br />
+              2023
+            </h3>
+            <p class="md:text-lg text-sm montserrat text-center">
+              Best two wheeler manufacturer <br />
+              of the year at the Bike India <br />
+              Awards 2023.
+            </p>
+          </div>
+          <div class="flex flex-col items-center gap-4">
+            <div class="h-36 flex items-center">
+              <img
+                class="h-full"
+                src="./assets/awards/The dimming prize.png"
+                alt=""
+              />
+            </div>
+
+            <h3
+              class="text-[#f12b00] lg:text-3xl text-xl font-extrabold text-center"
+            >
+              The Dimming <br />
+              Prize
+            </h3>
+            <p class="md:text-lg text-sm montserrat text-center">
+              TVS Motor Company is the only
+              <br />
+              two-wheeler company in the <br />
+              world to be awarded the most <br />
+              prestigious & Coveted <br />
+              recognition in TQM.
+            </p>
+          </div>
+          <div class="flex flex-col items-center gap-4">
+            <div class="h-36 flex items-center">
+              <img
+                class="h-full"
+                src="./assets/awards/Most trusted brand.png"
+                alt=""
+              />
+            </div>
+
+            <h3
+              class="text-[#f12b00] lg:text-3xl text-xl font-extrabold text-center"
+            >
+              Most trusted <br />
+              brand
+            </h3>
+            <p class="md:text-lg text-sm montserrat text-center">
+              TVS Motor Company has ranked <br />
+              no 1 company in the J.D Power <br />
+              Customer Service Satisfaction <br />
+              Survey for consecutive four years.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- awards and experince end -->
+    </section>
+    <!-- Why Delivery Companies are choosing start -->
+    <section id="section6">
+      <div class="WhyDeliveryCompaniesarechoosing relative -top-44">
+        <div class="container mx-auto relative">
+          <img
+            class="md:h-[580px] h-[800px] w-full"
+            src="./assets/Why-Delivery-Companies-are-choosing/Banner_1.png"
+            alt=""
+          />
+          <div class="absolute top-10 w-full h-full px-5">
+            <div class="flex md:flex-row flex-col justify-around items-center">
+              <div>
+                <img src="./assets/logo/TVS-logo.png" alt="" />
+                <h3 class="text-4xl text-white font-extrabold pt-5">
+                  Why delivery <br />
+                  companies are choosing <br />
+                  TVS Motorcycles?
+                </h3>
+                <ul class="list-disc marker:text-[#f12b00] pt-5 pl-6">
+                  <li class="text-white">World renowned brand</li>
+                  <li class="text-white">Strong after sales support</li>
+                  <li class="text-white">Heavy duty, build tough</li>
+                  <li class="text-white">Cost-Effective spare parts</li>
+                  <li class="text-white">Fuel Efficiency</li>
+                  <li class="text-white">Reliability</li>
+                  <li class="text-white">Great resale value</li>
+                </ul>
+              </div>
+              <div>
+                <img
+                  class="w-40 h-40"
+                  src="./assets/Why-Delivery-Companies-are-choosing/youtube.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Delivery Companies are choosing end -->
+    <section>
+      <div class="relative -top-44">
+        <!-- Dealers near You start -->
+        <div class="container mx-auto">
+          <h2
+            class="uppercase text-center text-[#f12b00] md:text-4xl text-2xl font-extrabold"
+          >
+            Dealers near You
+          </h2>
+          <div
+            class="mt-5 mb-5 md:px-28 px-5 gap-5 flex lg:flex-row flex-col justify-between"
+          >
+            <div class="montserrat">
+              <h2 class="text-3xl font-extrabold">
+                2 Dealers Located Near Saudi Arabia
+              </h2>
+              <p class="text-lg">
+                To view the dealers near you, choose your location.
+              </p>
+            </div>
+            <div
+              class="flex w-full lg:w-1/4 justify-center items-center bg-[#F1F1F1]"
+            >
+              <select
+                class="p-5 rounded-sm montserrat w-full"
+                name="Select your city"
+                id=""
+              >
+                <option class="text-xl" value="">Select your city</option>
+                <option class="text-xl" value="">Select your city</option>
+                <option class="text-xl" value="">Select your city</option>
+              </select>
+              <img class="pr-5" src="./assets/icon/_Path_.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="pt-5">
+          <img
+            class="w-full h-[500px]"
+            src="./assets/common/Capture.PNG"
+            alt=""
+          />
+        </div>
+        <div class="container mx-auto mt-10">
+          <div class="flex md:flex-row flex-col gap-10 px-10 justify-evenly">
+            <div class="flex py-5 pl-5 pr-16 gap-3 float-start bg-[#F1F1F1]">
+              <img class="w-8 h-8" src="./assets/delar/Location.png" alt="" />
+              <div class="montserrat relative">
+                <h3 class="text-[#f12b00] font-bold text-xl uppercase">
+                  Gulf Advantage <br />
+                  Automobiles
+                </h3>
+                <p class="text-base">
+                  Khurais Rd. Rabwah, <br />
+                  Riyadh
+                </p>
+                <p class="text-base mt-3">+99 000 111 222 333</p>
+                <p class="text-base">info@gulfadvauto.com</p>
+                <img
+                  class="w-10 h-10 absolute -right-20 top-[40%]"
+                  src="./assets/delar/Directions.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="flex py-5 pl-5 pr-16 gap-3 float-start bg-[#F1F1F1]">
+              <img class="w-8 h-8" src="./assets/delar/Location.png" alt="" />
+              <div class="montserrat relative">
+                <h3 class="text-[#f12b00] font-bold text-xl uppercase">
+                  Gulf Advantage <br />
+                  Automobiles
+                </h3>
+                <p class="text-base">
+                  Khurais Rd. Rabwah, <br />
+                  Riyadh
+                </p>
+                <p class="text-base mt-3">+99 000 111 222 333</p>
+                <p class="text-base">info@gulfadvauto.com</p>
+                <img
+                  class="w-10 h-10 absolute -right-20 top-[40%]"
+                  src="./assets/delar/Directions.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Dealers near You end -->
+      </div>
+    </section>
+    <section class="relative -top-32">
+      <!-- Let’s do business together start -->
+      <div class="bg-black">
+        <div class="container mx-auto py-10">
+          <div class="flex items-center flex-col">
+            <h2
+              class="uppercase text-center text-white md:text-4xl text-2xl font-extrabold"
+            >
+              Let’s do business together
+            </h2>
+            <img
+              class="w-36 h-36 my-14"
+              src="./assets/Let's-Do-business-together/Together.png"
+              alt=""
+            />
+            <p class="text-center montserrat text-white md:px-32 px-5">
+              "Gulf Advantage Automobiles (GAA) is proud to be the exclusive
+              distributor of TVS in the Kingdom of Saudi Arabia (KSA),
+              revolutionizing the automobile industry with our exceptional
+              services and commitment to customer satisfaction. With 4
+              showrooms, 8 service centers, 8 spare parts outlets, and a wide
+              network of dealer outlets spread across KSA, we are dedicated to
+              bringing the best automotive experience to every corner of the
+              country. For over a decade, GAA has been at the forefront of the
+              market, consistently striving for excellence in every aspect of
+              our operations. Our commitment to After Sales Service has earned
+              us the prestigious distinction of being ranked among the top two
+              automobile brands in KSA. We take great pride in our well-equipped
+              service centers staffed with highly skilled technicians, ensuring
+              that every vehicle receives the utmost care and attention."
+            </p>
+            <a
+              class="bg-[#f12b00] mt-10 uppercase lg:text-2xl text-sm py-2 md:px-8 px-4 rounded-sm text-white font-bold"
+              >Partner with us</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Let’s do business together end -->
+      <!-- follow us on social media start -->
+      <div class="bg-[#f12b00]">
+        <div
+          class="container mx-auto flex lg:px-10 px-5 md:py-10 py-5 lg:flex-row flex-col md:gap-10 gap-5 items-center justify-around"
+        >
+          <h2
+            class="xl:text-5xl lg:text-3xl text-lg font-extrabold text-white uppercase flex lg:flex-col flex-row gap-3"
+          >
+            Follow us
+            <span class="">On Social media</span>
+          </h2>
+          <div class="flex gap-5">
+            <a href="#">
+              <img
+                class="w-20 h-20"
+                src="./assets/social-media/Facebook.png"
+                alt="Facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="w-20 h-20"
+                src="./assets/social-media/Instagram.png"
+                alt="Instagram"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="w-20 h-20"
+                src="./assets/social-media/Twitter.png"
+                alt="Twitter"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="w-20 h-20"
+                src="./assets/social-media/Tiktok.png"
+                alt="Tiktok"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="w-20 h-20"
+                src="./assets/social-media/Linked-IN.png"
+                alt="Linked-IN"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- follow us on social media end -->
+    </section>
+    <footer class="montserrat">
+      <div class="container mx-auto relative -top-10 xl:px-20 px-5">
+        <div class="flex gap-20 lg:flex-row flex-col">
+          <div class="lg:w-1/3 w-full flex flex-col gap-5">
+            <img class="w-48 h-24" src="./assets/logo/TVS-logo.png" alt="" />
+            <div>
+              <h2 class="text-[#f12b00] text-xl font-bold">TVS HEADQUARTERS</h2>
+              <p class="text-lg font-medium">
+                Post Box No 4, Harita Hosur 635 109
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-2">
+                <img class="w-6 h-6" src="./assets/footer/Phone.svg" alt="" />
+                <p>+99 000 111 222 333</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img class="w-6 h-6" src="./assets/footer/Fax.svg" alt="" />
+                <p>+99 000 111 222 333</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="bg-[#f12b00] mt-2 flex p-5 gap-3 justify-center items-center rounded-sm"
+            >
+              <img src="./assets/footer/_Compound Path_.png" alt="" />
+              <div>
+                <p
+                  class="text-white uppercase font-bold text-xl tracking-wider"
+                >
+                  Customer Service
+                </p>
+                <p class="text-white text-base">customercare@tvsmotor.com</p>
+              </div>
+            </a>
+          </div>
+          <div
+            class="lg:w-2/3 flex gap-5 flex-col w-full justify-between flex-1"
+          >
+            <div class="w-full flex md:flex-row flex-col justify-evenly gap-5">
+              <div>
+                <h2 class="text-xl text-[#f12b00] font-bold uppercase">
+                  Useful links
+                </h2>
+                <div class="flex flex-col mt-8 gap-3">
+                  <a href="#" class="text-base">About us</a>
+                  <a href="#" class="text-base">Our Products</a>
+                </div>
+              </div>
+              <div>
+                <h2 class="text-xl text-[#f12b00] font-bold uppercase">
+                  Legal
+                </h2>
+                <div class="flex flex-col mt-8 gap-3">
+                  <a href="#" class="text-base">Terms & Conditions</a>
+                  <a href="#" class="text-base">Privacy Policy</a>
+                  <a href="#" class="text-base">Cookie Policy</a>
+                </div>
+              </div>
+              <div>
+                <h2 class="text-xl text-[#f12b00] font-bold uppercase">
+                  Authorised Distributor
+                </h2>
+                <div class="flex flex-col mt-8 gap-3">
+                  <p class="text-base">Gulf Advantage Automobiles LLC</p>
+                  <p class="text-base">Madinah Rd. Al Faisaliyah, Jeddah</p>
+                  <p class="text-base">+99 000 111 222 333</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-5 lg:justify-end justify-start">
+              <a
+                class="bg-[#f12b00] uppercase lg:text-2xl text-sm py-7 md:px-8 px-4 rounded-sm text-white font-bold"
+                >Contact Us</a
+              >
+              <a
+                class="bg-[#f12b00] uppercase lg:text-2xl text-sm py-7 md:px-8 px-4 rounded-sm text-white font-bold"
+                >Partner with us</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-[#F1F1F1] sm:mx-auto lg:my-8" />
+      <span class="block text-lg mb-6 text-center text-black"
+        >© 2024 TVS Motor Company, All Rights Reserved.</span
+      >
+    </footer>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- row js -->
+    <script src="./app.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- telephone flags input -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+    <script>
+      const input = document.querySelector("#phone");
+      window.intlTelInput(input, {
+        initialCountry: "auto",
+        geoIpLookup: (callback) => {
+          fetch("https://ipapi.co/json")
+            .then((res) => res.json())
+            .then((data) => callback(data.country_code))
+            .catch(() => callback("us"));
+        },
+        utilsScript: "/intl-tel-input/js/utils.js?1709392860975", // just for formatting/placeholders etc
+      });
+    </script>
+  </body>
+</html>

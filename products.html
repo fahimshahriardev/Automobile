@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products</title>
+    <!-- style css -->
+    <link rel="stylesheet" href="./products.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <div class="bg-black shadow-md shadow-[#f12b00] relative z-50">
+      <div
+        class="lg:flex lg:justify-between block items-center lg:py-7 xl:px-28 lg:px-16 py-3 px-5"
+      >
+        <!-- logo -->
+        <div class="flex items-center gap-5 cursor-pointer justify-between">
+          <a href="/index.html">
+            <img
+              class="lg:w-28 lg:h-30 w-16 h-16"
+              src="./assets/logo/TVS-logo.png"
+              alt=""
+            />
+          </a>
+          <div id="toggle-btn" class="w-20 h-20 lg:hidden">
+            <svg
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 15.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z"
+                fill-rule="nonzero"
+                fill="#ffffff"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- nav link -->
+        <div class="lg:flex hidden navbarDropdown transition-all">
+          <ul class="flex lg:flex-row flex-col lg:mt-0 gap-6 mt-5">
+            <li>
+              <a
+                href="/products.html"
+                class="text-white uppercase text-lg font-semibold"
+                >Our Products</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white uppercase text-lg font-semibold"
+                >Contact us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white uppercase text-lg font-semibold"
+                >About us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- button -->
+        <div class="lg:flex gap-2 lg:mt-0 mt-5 hidden navbarDropdown">
+          <a class="#">
+            <img
+              class="bg-[#f12b00] py-2 px-4 rounded-sm"
+              src="./assets/logo/Tvs Global.png"
+              alt=""
+          /></a>
+          <a
+            class="bg-[#f12b00] items-center px-1 flex gap-1 rounded-sm"
+            href="#"
+          >
+            <img class="w-9 h-6" src="./assets/logo/saudi-arabia.png" alt="" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path
+                d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414"
+                fill="#ffffff"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar end -->
+    <main>
+      <div class="backgroundImg lg:px-5">
+        <div class="flex justify-center py-5 gap-10">
+          <button
+            class="category py-2 px-1 uppercase text-white md:text-2xl text-lg font-extrabold"
+          >
+            motorcycles
+          </button>
+          <button
+            class="category py-2 px-1 uppercase text-white md:text-2xl text-lg font-extrabold"
+          >
+            sccoters
+          </button>
+        </div>
+        <!-- motorbike -->
+        <div
+          class="flex motorcycles lg:flex-row flex-col justify-around py-5 lg:px-0 md:px-20 px-5 items-center gap-10"
+        >
+          <div class="flex flex-col items-center gap-5">
+            <div class="swiperbuttonprev bg-white p-3 rounded-full w-12">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"
+                />
+              </svg>
+            </div>
+            <div class="swiper mySwiper myBikeSwiper">
+              <div id="motocycleslide" class="swiper-wrapper motocycleslide">
+                <!-- <div class="swiper-slide motorbike-swiper bg-white active">
+                  <div
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
+                  >
+                    <h3 class="text-xl font-semibold rounded-sm">
+                      APACHE RR310
+                    </h3>
+                    <img class="w-32 h-24" src="./assets/bike/310.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide motorbike-swiper bg-white">
+                  <div
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
+                  >
+                    <h3 class="text-xl font-semibold rounded-sm">
+                      APACHE RTR 160 4V
+                    </h3>
+                    <img
+                      class="w-32 h-24"
+                      src="./assets/bike/160-4V-Centre.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide motorbike-swiper bg-white">
+                  <div
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
+                  >
+                    <h3 class="text-xl font-semibold rounded-sm">
+                      hlx 150 5 gear
+                    </h3>
+                    <img
+                      class="w-32 h-24"
+                      src="./assets/bike/H150-listing-home.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide motorbike-swiper bg-white">
+                  <div
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
+                  >
+                    <h3 class="text-xl font-semibold rounded-sm">
+                      APACHE RR310
+                    </h3>
+                    <img class="w-32 h-24" src="./assets/bike/310.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide motorbike-swiper bg-white">
+                  <div
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
+                  >
+                    <h3 class="text-xl font-semibold rounded-sm">
+                      APACHE RTR 160 4V
+                    </h3>
+                    <img
+                      class="w-32 h-24"
+                      src="./assets/bike/160-4V-Centre.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide motorbike-swiper bg-white">
+                  <div
+                    class="flex py-1 gap-3 px-6 items-center justify-between"
+                  >
+                    <h3 class="text-xl font-semibold rounded-sm">
+                      hlx 150 5 gear
+                    </h3>
+                    <img
+                      class="w-32 h-24"
+                      src="./assets/bike/H150-listing-home.webp"
+                      alt=""
+                    />
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="swiperbuttonnext bg-white p-3 rounded-full w-12">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- dynamic bike display -->
+          <div
+            id="bikeDisplay"
+            class="flex flex-col gap-14 items-center bikedisplay mt-16 mb-5"
+          ></div>
+        </div>
+        <!-- sccoters -->
+        <div class="sccoters hidden">
+          <div
+            class="flex lg:flex-row flex-col justify-around py-5 lg:px-0 md:px-20 px-5 items-center gap-10"
+          >
+            <div class="flex flex-col items-center gap-5">
+              <div class="swiperbuttonprev bg-white p-3 rounded-full w-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="m12 6.586-8.707 8.707 1.414 1.414L12 9.414l7.293 7.293 1.414-1.414L12 6.586z"
+                  />
+                </svg>
+              </div>
+              <div class="swiper mySwiper mySccoterSwiper">
+                <div class="swiper-wrapper">
+                  <!-- <div class="swiper-slide sccoter-swiper active bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        APACHE RR310
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/sccooter/jupiter-listing-home.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccoter-swiper bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        APACHE RTR 160 4V
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/sccooter/Ntorq-RE.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccoter-swiper bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        hlx 150 5 gear
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/bike/H150-listing-home.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccoter-swiper bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        APACHE RR310
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/sccooter/jupiter-listing-home.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccoter-swiper bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        APACHE RTR 160 4V
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/sccooter/Ntorq-RE.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide sccoter-swiper bg-white">
+                    <div
+                      class="flex py-1 gap-3 px-6 items-center justify-between"
+                    >
+                      <h3 class="text-xl font-semibold rounded-sm">
+                        hlx 150 5 gear
+                      </h3>
+                      <img
+                        class="w-32 h-24"
+                        src="./assets/bike/H150-listing-home.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="swiperbuttonnext bg-white p-3 rounded-full w-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- dynamic sccoters display -->
+            <div
+              id="sccoterDisplay"
+              class="flex flex-col gap-14 items-center sccotersdisplay mt-16 mb-5"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="montserrat">
+      <div class="container mx-auto md:px-20 px-5">
+        <div class="flex pt-10 gap-20 lg:flex-row flex-col">
+          <div class="lg:w-1/3 w-full flex flex-col gap-5">
+            <img class="w-48 h-24" src="./assets/logo/TVS-logo.png" alt="" />
+            <div>
+              <h2 class="text-[#f12b00] text-xl font-bold">TVS HEADQUARTERS</h2>
+              <p class="text-lg font-medium">
+                Post Box No 4, Harita Hosur 635 109
+              </p>
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-2">
+                <img class="w-6 h-6" src="./assets/footer/Phone.svg" alt="" />
+                <p>+99 000 111 222 333</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img class="w-6 h-6" src="./assets/footer/Fax.svg" alt="" />
+                <p>+99 000 111 222 333</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="bg-[#f12b00] mt-2 flex p-5 gap-3 justify-center items-center rounded-sm"
+            >
+              <img src="./assets/footer/_Compound Path_.png" alt="" />
+              <div>
+                <p
+                  class="text-white uppercase font-bold text-xl tracking-wider"
+                >
+                  Customer Service
+                </p>
+                <p class="text-white text-base">customercare@tvsmotor.com</p>
+              </div>
+            </a>
+          </div>
+          <div
+            class="lg:w-2/3 flex gap-5 flex-col w-full justify-between flex-1"
+          >
+            <div class="w-full flex md:flex-row flex-col justify-evenly gap-5">
+              <div>
+                <h2 class="text-xl text-[#f12b00] font-bold uppercase">
+                  Useful links
+                </h2>
+                <div class="flex flex-col mt-8 gap-3">
+                  <a href="#" class="text-base">About us</a>
+                  <a href="#" class="text-base">Our Products</a>
+                </div>
+              </div>
+              <div>
+                <h2 class="text-xl text-[#f12b00] font-bold uppercase">
+                  Legal
+                </h2>
+                <div class="flex flex-col mt-8 gap-3">
+                  <a href="#" class="text-base">Terms & Conditions</a>
+                  <a href="#" class="text-base">Privacy Policy</a>
+                  <a href="#" class="text-base">Cookie Policy</a>
+                </div>
+              </div>
+              <div>
+                <h2 class="text-xl text-[#f12b00] font-bold uppercase">
+                  Authorised Distributor
+                </h2>
+                <div class="flex flex-col mt-8 gap-3">
+                  <p class="text-base">Gulf Advantage Automobiles LLC</p>
+                  <p class="text-base">Madinah Rd. Al Faisaliyah, Jeddah</p>
+                  <p class="text-base">+99 000 111 222 333</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-5 lg:justify-end justify-start">
+              <a
+                class="bg-[#f12b00] uppercase lg:text-2xl text-sm py-7 md:px-8 px-4 rounded-sm text-white font-bold"
+                >Contact Us</a
+              >
+              <a
+                class="bg-[#f12b00] uppercase lg:text-2xl text-sm py-7 md:px-8 px-4 rounded-sm text-white font-bold"
+                >Partner with us</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-[#F1F1F1] sm:mx-auto lg:my-8" />
+      <span class="block text-lg mb-6 text-center text-black"
+        >© 2024 TVS Motor Company, All Rights Reserved.</span
+      >
+    </footer>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- product js -->
+    <script src="./products.js"></script>
+  </body>
+</html>

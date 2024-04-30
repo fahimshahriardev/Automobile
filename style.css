@@ -1,0 +1,105 @@
+/* fonts */
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+
+  font-style: normal;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+.nav {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+}
+
+.iti {
+  width: 100% !important;
+}
+input:focus {
+  outline: none;
+}
+.static {
+  transform: translateY(-100%);
+}
+
+.fixed {
+  transform: translateY(0);
+}
+
+.whowearesection {
+  background-color: red;
+  clip-path: polygon(23% 0, 100% 8%, 100% 100%, 75% 85%, 0 99%, 0 26%);
+}
+
+/* banner slider style start */
+.swiper {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  display: flex;
+}
+
+.swiper-slide {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide .img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*banner slider style end */
+
+.swiper-slide2 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* brand experience */
+.brandexperience {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 79% 95%, 0 100%, 0% 50%);
+}
+
+/* WhyDeliveryCompaniesarechoosing */
+.WhyDeliveryCompaniesarechoosing {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 90%, 0 100%, 0% 50%);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  outline: none;
+  background: none;
+}
+
+.mySwiper4 {
+  width: 70% !important;
+}
+
+.activeBtn {
+  border: 3px solid #f12b00;
+}
+
+@media only screen and (max-width: 768px) {
+  .mySwiper4 {
+    width: 100% !important;
+  }
+}
